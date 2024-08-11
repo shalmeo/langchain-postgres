@@ -1629,6 +1629,8 @@ class PGVector(VectorStore):
         distance_strategy: DistanceStrategy = DEFAULT_DISTANCE_STRATEGY,
         pre_delete_collection: bool = False,
         connection: Optional[DBConnection] = None,
+        use_jsonb: bool = True,
+        create_extension: bool = True,
         **kwargs: Any,
     ) -> PGVector:
         """
@@ -1642,6 +1644,8 @@ class PGVector(VectorStore):
             embeddings=embedding,
             distance_strategy=distance_strategy,
             pre_delete_collection=pre_delete_collection,
+            use_jsonb=use_jsonb,
+            create_extension=create_extension,
             **kwargs,
         )
 
